@@ -113,13 +113,6 @@ The API starts on `http://localhost:8080`.
 
 ---
 
-## 📷 Screenshots
-
-<img width="1536" height="863" alt="image" src="https://github.com/user-attachments/assets/c26328a9-0e4a-4d18-b088-15a49bc981f8" />
-<img width="1536" height="863" alt="image" src="https://github.com/user-attachments/assets/a877c3e7-8e7f-47cc-8a1e-8c15dbb03bd9" />
-<img width="1536" height="863" alt="image" src="https://github.com/user-attachments/assets/284b5e00-dbd6-48f5-bf85-50d64561c42d" />
-<img width="1536" height="863" alt="image" src="https://github.com/user-attachments/assets/f0e0f771-0f94-4e3e-8f4b-df4a95c02fa0" />
-
 ## 📌 Future Enhancements
 
 - Resume Upload
