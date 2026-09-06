@@ -1,35 +1,22 @@
 package com.jsp.ojpms.controller;
 
-import java.io.IOException;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+@Controller
+public class ScheduleInterviewPageController {
 
-@WebServlet("/scheduleinterviewpage")
-public class ScheduleInterviewPageController extends HttpServlet{
+        @GetMapping("/scheduleinterviewpage")
+        public String scheduleInterviewPage(
+                        @RequestParam("userId") int userId,
+                        @RequestParam("jobId") int jobId,
+                        Model model) {
 
-    @Override
-    protected void doGet(HttpServletRequest req,
-            HttpServletResponse resp)
-            throws ServletException, IOException {
+                model.addAttribute("userId", userId);
+                model.addAttribute("jobId", jobId);
 
-        int userId =
-                Integer.parseInt(
-                req.getParameter("userId"));
-
-        int jobId =
-                Integer.parseInt(
-                req.getParameter("jobId"));
-
-        req.setAttribute("userId", userId);
-
-        req.setAttribute("jobId", jobId);
-
-        req.getRequestDispatcher(
-                "schedule-interview.jsp")
-                .forward(req, resp);
-    }
+                return "schedule-interview";
+        }
 }

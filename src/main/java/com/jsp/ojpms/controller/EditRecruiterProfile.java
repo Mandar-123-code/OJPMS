@@ -1,29 +1,35 @@
 package com.jsp.ojpms.controller;
 
-import java.io.IOException;
-
-import javax.persistence.EntityManager;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jsp.ojpms.entity.User;
-import com.jsp.ojpms.util.JPAUtil;
+import com.jsp.ojpms.repository.UserRepository;
 
-@WebServlet("/editrecruiterprofile")
-public class EditRecruiterProfile extends HttpServlet {
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String userId=req.getParameter("userId");
-		int id=Integer.parseInt(userId);
-		
-		EntityManager em = JPAUtil.getEm();
-		User user=em.find(User.class, id);
-		
-		req.setAttribute("user", user);
-		
-		req.getRequestDispatcher("editrecruiterprofile.jsp").forward(req, resp);
+@Controller
+public class EditRecruiterProfile {
+
+	private final UserRepository userRepository;
+
+	public EditRecruiterProfile(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
+
+	@GetMapping("/editrecruiterprofile")
+	public String editRecruiterProfile(
+			@RequestParam("userId") int userId,
+			Model model) {
+
+		User user = userRepository.findById(userId).orElse(null);
+
+		if (user == null) {
+			return "redirect:/home.jsp";
+		}
+
+		model.addAttribute("user", user);
+
+		return "editrecruiterprofile";
 	}
 }

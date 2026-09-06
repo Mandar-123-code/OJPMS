@@ -1,36 +1,36 @@
 package com.jsp.ojpms.controller;
 
-import javax.persistence.EntityManager;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import java.io.IOException;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jsp.ojpms.entity.User;
-import com.jsp.ojpms.util.JPAUtil;
+import com.jsp.ojpms.repository.UserRepository;
 
-@WebServlet(value = "/profile")
-public class ProfileController extends HttpServlet {
+@Controller
+public class ProfileController {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
+    private final UserRepository userRepository;
 
-        String stringId = req.getParameter("id");
-        System.out.println("stringID: " + stringId);
+    public ProfileController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
-        int id = Integer.parseInt(stringId);
+    @GetMapping("/profile")
+    public String profile(@RequestParam("id") int id,
+            Model model) {
 
-        EntityManager em = JPAUtil.getEm();
+        System.out.println("User ID: " + id);
 
-        User user = em.find(User.class, id);
+        User user = userRepository.findById(id).orElse(null);
 
-        req.setAttribute("user", user);
+        if (user == null) {
+            return "redirect:/home.jsp";
+        }
 
-//        req.getRequestDispatcher("profile.jsp")
-//           .forward(req, resp);
+        model.addAttribute("user", user);
+
+        return "profile";
     }
 }
