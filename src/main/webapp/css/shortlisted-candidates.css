@@ -1,0 +1,210 @@
+.main-content{
+    margin-left:260px;
+    min-height:100vh;
+    background:#f4f7fb;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 28px;
+    background:#fff;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.topbar h1{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    font-size:28px;
+    color:#1f2937;
+}
+
+.count-banner{
+    margin:28px;
+    background:#fff;
+    border-radius:20px;
+    padding:24px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.sl-count-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:#fef3c7;
+    color:#d97706;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+}
+
+.count-num{
+    font-size:32px;
+    font-weight:700;
+    color:#111827;
+}
+
+.count-label{
+    color:#6b7280;
+    font-size:14px;
+}
+
+.sl-content{
+    padding:0 28px 28px;
+}
+
+.candidate-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
+    gap:24px;
+}
+
+.candidate-card{
+    background:#fff;
+    border-radius:20px;
+    padding:24px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.candidate-card:hover{
+    transform:translateY(-5px);
+}
+
+.card-header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:20px;
+}
+
+.avatar{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#e0edff;
+    color:#0A66C2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+}
+
+.card-header h2{
+    margin:0;
+    font-size:20px;
+    color:#111827;
+}
+
+.badge-shortlisted{
+    display:inline-block;
+    margin-top:8px;
+    background:#fef3c7;
+    color:#b45309;
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.card-body{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.card-body p{
+    margin:0;
+    color:#4b5563;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.card-body i{
+    color:#0A66C2;
+    width:18px;
+}
+
+.card-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.profile-btn,
+.interview-btn{
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+}
+
+.interview-btn{
+    background:#0A66C2;
+    color:#fff;
+    border:none;
+}
+
+.interview-btn:hover{
+    background:#0853a1;
+}
+
+.empty-state{
+    background:#fff;
+    border-radius:20px;
+    padding:60px 30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.empty-state i{
+    font-size:60px;
+    color:#d97706;
+    margin-bottom:18px;
+}
+
+.empty-state h3{
+    margin:0 0 10px;
+    font-size:24px;
+    color:#111827;
+}
+
+.empty-state p{
+    color:#6b7280;
+    margin-bottom:20px;
+}
+
+@media(max-width:768px){
+    .main-content{
+        margin-left:0;
+    }
+
+    .topbar{
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    .count-banner{
+        margin:20px;
+    }
+
+    .sl-content{
+        padding:0 20px 20px;
+    }
+
+    .candidate-container{
+        grid-template-columns:1fr;
+    }
+
+    .card-actions{
+        flex-direction:column;
+    }
+}

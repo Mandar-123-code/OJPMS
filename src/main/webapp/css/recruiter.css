@@ -1,0 +1,272 @@
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+}
+
+.main-content{
+    margin-left:260px;
+    padding:30px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.topbar h1{
+    margin:0;
+    font-size:28px;
+    font-weight:700;
+}
+
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.rd-search{
+    padding:12px 15px;
+    border:1px solid #dbe3ee;
+    border-radius:10px;
+    width:260px;
+    outline:none;
+}
+
+.welcome-banner{
+    background:linear-gradient(135deg,#0A66C2,#004182);
+    color:#fff;
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(10,102,194,.2);
+}
+
+.welcome-banner h1{
+    margin:0;
+    font-size:34px;
+    font-family:'Poppins',sans-serif;
+}
+
+.welcome-banner h1 span{
+    color:#dbeafe;
+}
+
+.welcome-banner p{
+    margin-top:10px;
+    font-size:15px;
+}
+
+.btn-welcome-rd,
+.btn-welcome-rd-outline{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    margin-right:10px;
+}
+
+.btn-welcome-rd{
+    background:#fff;
+    color:#0A66C2;
+}
+
+.btn-welcome-rd-outline{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.stat-icon{
+    font-size:28px;
+    color:#0A66C2;
+    margin-bottom:10px;
+}
+
+.stat-number{
+    font-size:32px;
+    font-weight:700;
+    color:#0A66C2;
+}
+
+.stat-label{
+    color:#6b7280;
+    margin-top:5px;
+}
+
+.rd-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+.table-wrapper,
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.table-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.table-title h2{
+    margin:0;
+    font-size:20px;
+}
+
+.data-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.data-table th{
+    background:#f8fafc;
+    color:#0A66C2;
+    padding:14px;
+    text-align:left;
+    font-size:14px;
+}
+
+.data-table td{
+    padding:14px;
+    border-top:1px solid #edf2f7;
+}
+
+.data-table tr:hover{
+    background:#f8fbff;
+}
+
+.badge{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.badge-success{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.rd-card-title{
+    margin:0 0 20px;
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.rd-action-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+    text-decoration:none;
+    color:#1f2937;
+    border:1px solid #eef2f7;
+    border-radius:12px;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.rd-action-item:hover{
+    background:#f8fbff;
+    transform:translateX(5px);
+}
+
+.rd-action-icon{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    background:#e8f1ff;
+    color:#0A66C2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+}
+
+.rd-action-icon-red{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.rd-action-item h4{
+    margin:0;
+    font-size:15px;
+}
+
+.rd-action-item p{
+    margin:3px 0 0;
+    font-size:13px;
+    color:#6b7280;
+}
+
+.btn{
+    text-decoration:none;
+    padding:10px 16px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:#0A66C2;
+    color:#fff;
+}
+
+.btn-secondary{
+    background:#eef4ff;
+    color:#0A66C2;
+}
+
+.btn-sm{
+    font-size:14px;
+}
+
+@media(max-width:992px){
+    .rd-grid{
+        grid-template-columns:1fr;
+    }
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .topbar-right{
+        flex-wrap:wrap;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:20px;
+    }
+}

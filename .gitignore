@@ -1,0 +1,15 @@
+/target/
+/bin/
+.metadata/
+.settings/
+Servers/
+*.class
+
+# IDE files
+.classpath
+.project
+.vscode/
+
+# IntelliJ
+.idea/
+*.iml

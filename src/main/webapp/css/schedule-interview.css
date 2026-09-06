@@ -1,0 +1,164 @@
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:#F4F7FA;
+    color:#1D2226;
+}
+
+.main-content{
+    margin-left:260px;
+    min-height:100vh;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 28px;
+    background:#fff;
+    border-bottom:1px solid #E5E7EB;
+}
+
+.topbar-left h1{
+    margin:0;
+    font-size:28px;
+    font-family:'Poppins',sans-serif;
+}
+
+.si-info-card{
+    margin:28px;
+    background:linear-gradient(135deg,#0A66C2,#004182);
+    color:#fff;
+    border-radius:20px;
+    padding:28px;
+    box-shadow:0 10px 30px rgba(10,102,194,.2);
+}
+
+.si-info-title{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.si-id-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.si-pill{
+    background:rgba(255,255,255,.15);
+    padding:12px 18px;
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+}
+
+.si-form-wrapper{
+    padding:0 28px 28px;
+    display:flex;
+    justify-content:center;
+}
+
+.si-form-card{
+    width:100%;
+    max-width:700px;
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    border:1px solid #EEF2F6;
+}
+
+.si-form-title{
+    margin:0 0 28px;
+    font-size:24px;
+    color:#0A66C2;
+    font-family:'Poppins',sans-serif;
+}
+
+.si-input-group{
+    margin-bottom:22px;
+}
+
+.si-input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#374151;
+}
+
+.si-input-group label i{
+    color:#0A66C2;
+    margin-right:6px;
+}
+
+.si-input-group input,
+.si-input-group select{
+    width:100%;
+    box-sizing:border-box;
+    padding:14px 16px;
+    border:1px solid #D1D5DB;
+    border-radius:12px;
+    font-size:14px;
+    transition:.3s;
+    background:#fff;
+}
+
+.si-input-group input:focus,
+.si-input-group select:focus{
+    outline:none;
+    border-color:#0A66C2;
+    box-shadow:0 0 0 4px rgba(10,102,194,.12);
+}
+
+.schedule-btn{
+    width:100%;
+    border:none;
+    background:#0A66C2;
+    color:#fff;
+    padding:15px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.schedule-btn:hover{
+    background:#004182;
+    transform:translateY(-2px);
+}
+
+.schedule-btn i{
+    margin-right:8px;
+}
+
+@media(max-width:992px){
+    .main-content{
+        margin-left:0;
+    }
+}
+
+@media(max-width:768px){
+    .topbar{
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    .si-id-pills{
+        flex-direction:column;
+    }
+
+    .si-form-card{
+        padding:25px;
+    }
+
+    .topbar-left h1{
+        font-size:22px;
+    }
+}

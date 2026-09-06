@@ -1,0 +1,228 @@
+.main-content{
+    margin-left:260px;
+    min-height:100vh;
+    background:#f4f7fb;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 30px;
+    background:#fff;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.topbar-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.topbar h1{
+    font-size:26px;
+    font-weight:700;
+    color:#1f2937;
+}
+
+.va-back-btn{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:#eef4ff;
+    color:#0A66C2;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.va-back-btn:hover{
+    background:#0A66C2;
+    color:#fff;
+}
+
+.count-banner{
+    margin:28px;
+    background:#fff;
+    border-radius:20px;
+    padding:24px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+.va-count-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:#e8f1ff;
+    color:#0A66C2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+}
+
+.count-num{
+    font-size:32px;
+    font-weight:700;
+    color:#111827;
+}
+
+.count-label{
+    color:#6b7280;
+    font-size:14px;
+}
+
+.va-content{
+    padding:0 28px 30px;
+}
+
+.empty-state{
+    background:#fff;
+    border-radius:20px;
+    padding:70px 30px;
+    text-align:center;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+.empty-state i{
+    font-size:60px;
+    color:#d1d5db;
+    margin-bottom:18px;
+}
+
+.empty-state h3{
+    font-size:24px;
+    color:#1f2937;
+    margin-bottom:10px;
+}
+
+.empty-state p{
+    color:#6b7280;
+}
+
+.applicants-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:24px;
+}
+
+.applicant-card{
+    background:#fff;
+    border-radius:20px;
+    padding:24px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.applicant-card:hover{
+    transform:translateY(-4px);
+}
+
+.card-header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:18px;
+}
+
+.profile-circle{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#e8f1ff;
+    color:#0A66C2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+}
+
+.card-header h2{
+    font-size:20px;
+    color:#1f2937;
+    margin-bottom:6px;
+}
+
+.card-body{
+    margin-bottom:20px;
+}
+
+.card-body p{
+    margin:10px 0;
+    color:#4b5563;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.card-body i{
+    color:#0A66C2;
+    width:18px;
+}
+
+.card-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.profile-btn,
+.shortlist-btn,
+.reject-btn{
+    flex:1;
+    text-align:center;
+}
+
+.shortlist-btn{
+    background:#16a34a;
+    color:#fff;
+    border:none;
+}
+
+.shortlist-btn:hover{
+    background:#15803d;
+}
+
+.reject-btn{
+    background:#dc2626;
+    color:#fff;
+    border:none;
+}
+
+.reject-btn:hover{
+    background:#b91c1c;
+}
+
+.job-name{
+    font-weight:500;
+}
+
+@media(max-width:768px){
+    .main-content{
+        margin-left:0;
+    }
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .count-banner{
+        margin:20px;
+    }
+
+    .va-content{
+        padding:0 20px 20px;
+    }
+
+    .card-actions{
+        flex-direction:column;
+    }
+}
